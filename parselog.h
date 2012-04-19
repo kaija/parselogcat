@@ -10,6 +10,11 @@ struct parse_var {
 };
 
 enum{
+	PLAT_QCOM,
+	PLAT_NVIDIA
+};
+
+enum{
     ERR_ZYGOTE_CRASH,
     ERR_APP_ANR,
     ERR_APP_EXCEPTION,
