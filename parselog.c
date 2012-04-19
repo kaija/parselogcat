@@ -112,6 +112,12 @@ int parse_msg(char *line)
 			dump_log(line);
 		}
 	}
+	if( strstr(line, "tid")!=NULL && strstr(line, "pid")!=NULL && strstr(line, ">>>")!=NULL && strstr(line, "<<<")!=NULL)
+	{
+		printf("Daemon crash\n");
+		dump_time(line);
+		dump_log(line);
+	}
 }
 
 int file_exist(char *path)
